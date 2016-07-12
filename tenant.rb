@@ -17,3 +17,8 @@ class Tenant
     end
   end
 end
+
+@p1 = Tenant.new "Eric", "Carreiro", "male", "11/9/1983"
+@p2 = Tenant.new "Kate", "Britton", "female", "6/19/1985"
+@p3 = Tenant.new "Annette", "Fasone", "female", "7/15/1985"
+@p4 = Tenant.new "Doug", "Britton", "male", "6/19/1985"

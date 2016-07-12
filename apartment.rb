@@ -14,12 +14,22 @@ class Apartment
     @price = "$#{price} per month"
   end
 
-  def studio
+  def studio?
     num_beds == 1 ? true : false
   end
 
+  def empty?
+    @tenants.length == 0 ? true : false
+  end
+
+  def full?
+    @tenants.length == num_beds ? true : false
+  end
+
   def move_in person
-    @tenants << person
+    (@tenants.length == num_beds) ? (puts "We're full! #{person.f_name} #{person.l_name} can't move in!") : (@tenants << person)
   end
 
 end
+
+@a1 = Apartment.new "#4", 3, 2
