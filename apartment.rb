@@ -27,9 +27,11 @@ class Apartment
   end
 
   def move_in person
-    (@tenants.length == num_beds) ? (puts "We're full! #{person.f_name} #{person.l_name} can't move in!") : (@tenants << person)
+    full? ? (puts "We're full! #{person.f_name} #{person.l_name} can't move in!") : (@tenants << person)
   end
 
 end
 
 @a1 = Apartment.new "#4", 3, 2
+@a2 = Apartment.new "#7", 2, 1
+@a3 = Apartment.new "#3", 2, 2
